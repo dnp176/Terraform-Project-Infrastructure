@@ -12,24 +12,25 @@ Environment-specific configurations (e.g., `dev`, `qa`, `prod`) are stored under
 ## 📂 Project Directory Structure
 RootFolder/
 ├── modules/
-│ ├── ec2/
-│ │ ├── main.tf
-│ │ ├── variables.tf
-│ │ └── outputs.tf
-│ ├── vpc/
-│ │ ├── main.tf
-│ │ ├── variables.tf
-│ │ └── outputs.tf
-│ └── security-group/
-│ ├── main.tf
-│ ├── variables.tf
-│ └── outputs.tf
+│   ├── ec2/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   └── outputs.tf
+│   ├── vpc/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   └── outputs.tf
+│   └── security-group/
+│       ├── main.tf
+│       ├── variables.tf
+│       └── outputs.tf
 └── envs/
-└── dev/
-├── main.tf
-├── variables.tf
-├── terraform.tfvars
-└── backend.tf
+    └── dev/
+        ├── main.tf
+        ├── variables.tf
+        ├── terraform.tfvars
+        └── backend.tf
+
 
        ┌──────────────────────────────────────────────────────┐
        │                     AWS Provider                     │
