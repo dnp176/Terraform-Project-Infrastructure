@@ -38,29 +38,29 @@ RootFolder/
                               │
                               ▼
        ┌──────────────────────────────────────────────────────┐
-       │                  VPC Module (dev)                   │
-       │  - VPC (10.0.0.0/16)                                │
-       │  - 2 Subnets (dev-subnet-1, dev-subnet-2)          │
-       │  - Internet Gateway                                 │
-       │  - Route Table + Route                              │
+       │                  VPC Module (dev)                    │
+       │  - VPC (10.0.0.0/16)                                 │
+       │  - 2 Subnets (dev-subnet-1, dev-subnet-2)            │
+       │  - Internet Gateway                                  │
+       │  - Route Table + Route                               │
        └──────────────────────────────────────────────────────┘
                               │
                               ▼
        ┌──────────────────────────────────────────────────────┐
-       │          Security Group Module (dev)                │
-       │  - Common SG (dev-common-sg)                        │
-       │  - Default ports: 22, 80, 443                       │
-       │  - Extra ports: 8080 (dev specific)                 │
+       │          Security Group Module (dev)                 │
+       │  - Common SG (dev-common-sg)                         │
+       │  - Default ports: 22, 80, 443                        │
+       │  - Extra ports: 8080 (dev specific)                  │
        └──────────────────────────────────────────────────────┘
                               │
                               ▼
        ┌──────────────────────────────────────────────────────┐
-       │                EC2 Module (dev)                     │
-       │  - Instance: dev-Dev-EC2                            │
-       │  - Subnet: dev-subnet-1                             │
-       │  - SG: dev-common-sg                                │
-       │  - Key Pair: New_Test                               │
-       │  - User Data: dev-init.sh                           │
+       │                EC2 Module (dev)                      │
+       │  - Instance: dev-Dev-EC2                             │
+       │  - Subnet: dev-subnet-1                              │
+       │  - SG: dev-common-sg                                 │
+       │  - Key Pair: New_Test                                │
+       │  - User Data: dev-init.sh                            │
        └──────────────────────────────────────────────────────┘
 
 
