@@ -10,35 +10,31 @@ Environment-specific configurations (e.g., `dev`, `qa`, `prod`) are stored under
 ---
 
 ## 📂 Project Directory Structure
--- Project Structure
-
 RootFolder/
-├── modules/
-│   ├── ec2/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   ├── vpc/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   └── security-group/
-│       ├── main.tf
-│       ├── variables.tf
-│       └── outputs.tf
-└── envs/
-    ├── dev/
-    │   ├── main.tf
-    │   ├── variables.tf
-    │   ├── terraform.tfvars
-    │   └── backend.tf
-    └── qa/
-        ├── main.tf
-        ├── variables.tf
-        ├── terraform.tfvars
-        └── backend.tf
-
-
+├── modules/                          # Reusable Terraform modules
+│   ├── ec2/                          # EC2 Instance Module
+│   │   ├── main.tf                   # Resource definitions for EC2
+│   │   ├── variables.tf              # Input variables for EC2
+│   │   └── outputs.tf                # Outputs from EC2 module
+│   ├── vpc/                          # VPC Module
+│   │   ├── main.tf                   # Resource definitions for VPC
+│   │   ├── variables.tf              # Input variables for VPC
+│   │   └── outputs.tf                # Outputs from VPC module
+│   └── security-group/               # Security Group Module
+│       ├── main.tf                   # Security Group resources
+│       ├── variables.tf              # Input variables for SG
+│       └── outputs.tf                # Outputs from SG module
+└── envs/                             # Environment-specific configurations
+    ├── dev/                          # Development environment
+    │   ├── main.tf                   # Calls modules for Dev environment
+    │   ├── variables.tf              # Variables specific to Dev
+    │   ├── terraform.tfvars          # Actual values for Dev variables
+    │   └── backend.tf                # Backend configuration (Remote state)
+    └── qa/                           # QA environment (similar to Dev)
+        ├── main.tf                   # Calls modules for QA environment
+        ├── variables.tf              # Variables specific to QA
+        ├── terraform.tfvars          # Actual values for QA variables
+        └── backend.tf                # Backend configuration for QA
 
 
 
